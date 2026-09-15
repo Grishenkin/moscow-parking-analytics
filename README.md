@@ -716,32 +716,6 @@ docs/architecture.png
 
 ---
 
-# Статус проекта
-
-- [x] REST API
-- [x] автоматическая загрузка данных
-- [x] пагинация
-- [x] RAW GeoJSON
-- [x] Apache Spark
-- [x] нормализация источников
-- [x] единая Silver-модель
-- [x] Parquet
-- [x] партиционирование
-- [x] Spark SQL
-- [x] Gold-витрины
-- [x] Data Quality
-- [x] Streamlit dashboard
-- [x] интерактивная карта
-- [x] Apache Airflow
-- [x] расписание
-- [x] retries
-- [x] unit-тесты
-- [x] бизнес-требования
-- [ ] архитектурная диаграмма
-- [ ] GitHub-репозиторий
-
----
-
 ## Автор
 
 Учебный проект по Data Engineering и Apache Spark.
