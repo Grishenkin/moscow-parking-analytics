@@ -1,0 +1,21 @@
+
+api:
+  base_url: "https://apidata.mos.ru/v1"
+  page_size: 500
+
+datasets:
+
+  taxi_parking:
+    dataset_id: 621
+    title: "Парковки такси"
+    output_path: "data/raw/api/taxi_parking/data.geojson"
+
+  intercept_parking:
+    dataset_id: 622
+    title: "Перехватывающие парковки"
+    output_path: "data/raw/api/intercept_parking/data.geojson"
+
+  paid_parking:
+    dataset_id: 623
+    title: "Платные парковки"
+    output_path: "data/raw/api/paid_parking/data.geojson"

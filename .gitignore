@@ -1,0 +1,34 @@
+# Secrets
+.env
+
+# Example environment file is allowed
+!.env.example
+
+# Virtual environments
+.venv-project/
+.venv-airflow/
+
+# Airflow local state
+.airflow/
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Spark
+.sparkStaging/
+metastore_db/
+derby.log
+
+# Generated data
+data/raw/
+data/silver/
+data/gold/
+
+# macOS
+.DS_Store
+
+# Development notebook
+project_development.ipynb

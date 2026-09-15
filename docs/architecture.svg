@@ -1,0 +1,526 @@
+
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="1500"
+     height="900"
+     viewBox="0 0 1500 900">
+
+<style>
+    .title {
+        font: bold 34px Arial, sans-serif;
+        fill: #111;
+    }
+
+    .subtitle {
+        font: 18px Arial, sans-serif;
+        fill: #444;
+    }
+
+    .box-title {
+        font: bold 20px Arial, sans-serif;
+        fill: #111;
+    }
+
+    .box-text {
+        font: 16px Arial, sans-serif;
+        fill: #333;
+    }
+
+    .small {
+        font: 14px Arial, sans-serif;
+        fill: #444;
+    }
+
+    .box {
+        fill: white;
+        stroke: #333;
+        stroke-width: 2;
+        rx: 14;
+    }
+
+    .spark {
+        fill: #fff3e8;
+        stroke: #e25a1c;
+        stroke-width: 3;
+        rx: 14;
+    }
+
+    .airflow {
+        fill: #eef7ff;
+        stroke: #2878b5;
+        stroke-width: 3;
+        rx: 14;
+    }
+
+    .data {
+        fill: #f5f5f5;
+        stroke: #555;
+        stroke-width: 2;
+        rx: 14;
+    }
+
+    .dashboard {
+        fill: #eefbef;
+        stroke: #388e3c;
+        stroke-width: 3;
+        rx: 14;
+    }
+
+    .arrow {
+        stroke: #333;
+        stroke-width: 3;
+        fill: none;
+        marker-end: url(#arrow);
+    }
+</style>
+
+<defs>
+    <marker id="arrow"
+            markerWidth="10"
+            markerHeight="10"
+            refX="9"
+            refY="3"
+            orient="auto"
+            markerUnits="strokeWidth">
+
+        <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+
+    </marker>
+</defs>
+
+
+<!-- ===================================================== -->
+<!-- TITLE -->
+<!-- ===================================================== -->
+
+<text x="750"
+      y="55"
+      text-anchor="middle"
+      class="title">
+    Moscow Parking Analytics
+</text>
+
+<text x="750"
+      y="90"
+      text-anchor="middle"
+      class="subtitle">
+    Data Engineering Architecture
+</text>
+
+
+<!-- ===================================================== -->
+<!-- DATA SOURCES -->
+<!-- ===================================================== -->
+
+<rect x="50"
+      y="170"
+      width="270"
+      height="190"
+      class="box"/>
+
+<text x="185"
+      y="210"
+      text-anchor="middle"
+      class="box-title">
+    Открытые данные Москвы
+</text>
+
+<text x="185"
+      y="245"
+      text-anchor="middle"
+      class="box-text">
+    REST API
+</text>
+
+<text x="185"
+      y="280"
+      text-anchor="middle"
+      class="small">
+    Набор 621 — парковки такси
+</text>
+
+<text x="185"
+      y="310"
+      text-anchor="middle"
+      class="small">
+    Набор 622 — перехватывающие
+</text>
+
+<text x="185"
+      y="340"
+      text-anchor="middle"
+      class="small">
+    Набор 623 — платные парковки
+</text>
+
+
+<!-- ===================================================== -->
+<!-- RAW -->
+<!-- ===================================================== -->
+
+<rect x="390"
+      y="190"
+      width="220"
+      height="150"
+      class="data"/>
+
+<text x="500"
+      y="230"
+      text-anchor="middle"
+      class="box-title">
+    Сырой слой
+</text>
+
+<text x="500"
+      y="265"
+      text-anchor="middle"
+      class="box-text">
+    GeoJSON
+</text>
+
+<text x="500"
+      y="300"
+      text-anchor="middle"
+      class="small">
+    data/raw/api/
+</text>
+
+
+<!-- ===================================================== -->
+<!-- SPARK NORMALIZATION -->
+<!-- ===================================================== -->
+
+<rect x="680"
+      y="170"
+      width="260"
+      height="190"
+      class="spark"/>
+
+<text x="810"
+      y="210"
+      text-anchor="middle"
+      class="box-title">
+    Apache Spark
+</text>
+
+<text x="810"
+      y="245"
+      text-anchor="middle"
+      class="box-text">
+    Нормализация данных
+</text>
+
+<text x="810"
+      y="280"
+      text-anchor="middle"
+      class="small">
+    приведение схем
+</text>
+
+<text x="810"
+      y="310"
+      text-anchor="middle"
+      class="small">
+    очистка / типизация
+</text>
+
+<text x="810"
+      y="340"
+      text-anchor="middle"
+      class="small">
+    обработка координат
+</text>
+
+
+<!-- ===================================================== -->
+<!-- SILVER -->
+<!-- ===================================================== -->
+
+<rect x="1010"
+      y="190"
+      width="230"
+      height="150"
+      class="data"/>
+
+<text x="1125"
+      y="230"
+      text-anchor="middle"
+      class="box-title">
+    Очищенный слой
+</text>
+
+<text x="1125"
+      y="265"
+      text-anchor="middle"
+      class="box-text">
+    Parquet
+</text>
+
+<text x="1125"
+      y="300"
+      text-anchor="middle"
+      class="small">
+    parking_objects
+</text>
+
+
+<!-- ===================================================== -->
+<!-- TOP ARROWS -->
+<!-- ===================================================== -->
+
+<line x1="320"
+      y1="265"
+      x2="390"
+      y2="265"
+      class="arrow"/>
+
+<line x1="610"
+      y1="265"
+      x2="680"
+      y2="265"
+      class="arrow"/>
+
+<line x1="940"
+      y1="265"
+      x2="1010"
+      y2="265"
+      class="arrow"/>
+
+
+<!-- ===================================================== -->
+<!-- DATA QUALITY -->
+<!-- ===================================================== -->
+
+<rect x="80"
+      y="460"
+      width="270"
+      height="170"
+      class="box"/>
+
+<text x="215"
+      y="505"
+      text-anchor="middle"
+      class="box-title">
+    Контроль качества данных
+</text>
+
+<text x="215"
+      y="545"
+      text-anchor="middle"
+      class="small">
+    NULL / дубликаты
+</text>
+
+<text x="215"
+      y="575"
+      text-anchor="middle"
+      class="small">
+    координаты
+</text>
+
+<text x="215"
+      y="605"
+      text-anchor="middle"
+      class="small">
+    вместимость / типы объектов
+</text>
+
+
+<!-- ===================================================== -->
+<!-- SPARK SQL -->
+<!-- ===================================================== -->
+
+<rect x="450"
+      y="450"
+      width="280"
+      height="180"
+      class="spark"/>
+
+<text x="590"
+      y="495"
+      text-anchor="middle"
+      class="box-title">
+    Spark SQL
+</text>
+
+<text x="590"
+      y="530"
+      text-anchor="middle"
+      class="box-text">
+    Аналитические агрегации
+</text>
+
+<text x="590"
+      y="565"
+      text-anchor="middle"
+      class="small">
+    районы / округа
+</text>
+
+<text x="590"
+      y="595"
+      text-anchor="middle"
+      class="small">
+    типы / вместимость
+</text>
+
+
+<!-- ===================================================== -->
+<!-- GOLD -->
+<!-- ===================================================== -->
+
+<rect x="810"
+      y="425"
+      width="290"
+      height="230"
+      class="data"/>
+
+<text x="955"
+      y="465"
+      text-anchor="middle"
+      class="box-title">
+    Аналитический слой
+</text>
+
+<text x="955"
+      y="500"
+      text-anchor="middle"
+      class="box-text">
+    Витрины Parquet
+</text>
+
+<text x="955"
+      y="535"
+      text-anchor="middle"
+      class="small">
+    district_summary
+</text>
+
+<text x="955"
+      y="565"
+      text-anchor="middle"
+      class="small">
+    adm_area_summary
+</text>
+
+<text x="955"
+      y="595"
+      text-anchor="middle"
+      class="small">
+    object_type_summary
+</text>
+
+<text x="955"
+      y="625"
+      text-anchor="middle"
+      class="small">
+    parking_map
+</text>
+
+
+<!-- ===================================================== -->
+<!-- STREAMLIT -->
+<!-- ===================================================== -->
+
+<rect x="1180"
+      y="455"
+      width="250"
+      height="175"
+      class="dashboard"/>
+
+<text x="1305"
+      y="500"
+      text-anchor="middle"
+      class="box-title">
+    Streamlit
+</text>
+
+<text x="1305"
+      y="535"
+      text-anchor="middle"
+      class="box-text">
+    Аналитический дашборд
+</text>
+
+<text x="1305"
+      y="570"
+      text-anchor="middle"
+      class="small">
+    Обзор
+</text>
+
+<text x="1305"
+      y="600"
+      text-anchor="middle"
+      class="small">
+    Районы / Карта
+</text>
+
+
+<!-- ===================================================== -->
+<!-- CONNECTIONS SECOND ROW -->
+<!-- ===================================================== -->
+
+<!-- Silver -> Spark SQL -->
+<path d="
+    M1125 340
+    L1125 395
+    L590 395
+    L590 450
+"
+class="arrow"/>
+
+<!-- Quality -> Spark SQL -->
+<line x1="350"
+      y1="545"
+      x2="450"
+      y2="545"
+      class="arrow"/>
+
+<!-- Spark SQL -> Gold -->
+<line x1="730"
+      y1="545"
+      x2="810"
+      y2="545"
+      class="arrow"/>
+
+<!-- Gold -> Dashboard -->
+<line x1="1100"
+      y1="545"
+      x2="1180"
+      y2="545"
+      class="arrow"/>
+
+
+<!-- ===================================================== -->
+<!-- AIRFLOW -->
+<!-- ===================================================== -->
+
+<rect x="170"
+      y="735"
+      width="1160"
+      height="120"
+      class="airflow"/>
+
+<text x="750"
+      y="775"
+      text-anchor="middle"
+      class="box-title">
+    Apache Airflow — оркестрация
+</text>
+
+<text x="750"
+      y="810"
+      text-anchor="middle"
+      class="box-text">
+    download_sources → normalize_parking → build_unified_dataset → build_marts → quality_checks
+</text>
+
+<text x="750"
+      y="840"
+      text-anchor="middle"
+      class="small">
+    Расписание: понедельник 06:00 Europe/Moscow | попыток повтора: 2 | одновременно запусков: 1
+</text>
+
+
+</svg>
